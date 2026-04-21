@@ -23,6 +23,35 @@
             border-radius: 10px;
             margin-bottom: 10px;
         }
+
+        form {
+            margin: 20px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            padding: 8px 15px;
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #a93226;
+        }
+
+        button:hover {
+            background-color: #a93226;
+        
+            }
     </style>
 
 </head>
@@ -43,6 +72,11 @@
             <h2>Servicios</h2>
 
             <p>Ofrecemos servicios tanto para particulares como para profesionales del sector.</p>
+
+            <form>
+                <input type="text" placeholder="Buscar servicio...">
+                <button type="submit">Buscar</button>
+            </form>
 
             <div class="servicio">
                 <img src="imagenes/carne.jpg" alt="Venta de carne" width="200">
