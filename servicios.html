@@ -5,55 +5,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Servicios - Mi empresa</title>
     <link rel='stylesheet' href='main.css'>
-
-    <style>
-        main {
-            text-align: center;
-        }
-
-        .servicio {
-            margin: 20px;
-            padding: 15px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .servicio img {
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        form {
-            margin: 20px;
-        }
-
-        input {
-            padding: 8px;
-            width: 200px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        form button {
-            padding: 8px 15px;
-            background-color: #c0392b;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background-color: #a93226;
-        }
-
-        button:hover {
-            background-color: #a93226;
-        
-            }
-    </style>
-
 </head>
 
 <body>
@@ -69,37 +20,44 @@
 
     <main>
         <section>
+
             <h2>Servicios</h2>
 
             <p>Ofrecemos servicios tanto para particulares como para profesionales del sector.</p>
 
-            <form>
-                <input type="text" placeholder="Buscar servicio...">
+            <!-- BUSCADOR -->
+            <form onsubmit="return false;">
+                <input type="text" id="buscador" placeholder="Buscar servicio...">
                 <button type="submit">Buscar</button>
             </form>
 
-            <div class="servicio">
-                <img src="imagenes/carne.jpg" alt="Venta de carne" width="200">
-                <h3>Venta de productos cárnicos</h3>
-                <p>Carne fresca de alta calidad para todo tipo de clientes.</p>
-            </div>
+            <!-- 🔥 CONTENEDOR TIPO TIENDA -->
+            <div class="servicios-grid">
 
-            <div class="servicio">
-                <img src="imagenes/corte.jpg" alt="Corte personalizado" width="200">
-                <h3>Corte personalizado</h3>
-                <p>Adaptamos cada pedido según las necesidades del cliente.</p>
-            </div>
+                <div class="servicio">
+                    <img src="imagenes/carne.jpg" alt="Venta de carne">
+                    <h3>Venta de productos cárnicos</h3>
+                    <p>Carne fresca de alta calidad para todo tipo de clientes.</p>
+                </div>
 
-            <div class="servicio">
-                <img src="imagenes/delivery.jpg" alt="Entrega a domicilio" width="200">
-                <h3>Entrega a domicilio</h3>
-                <p>Envío rápido y seguro directamente a tu hogar o negocio.</p>
-            </div>
+                <div class="servicio">
+                    <img src="imagenes/corte.jpg" alt="Corte personalizado">
+                    <h3>Corte personalizado</h3>
+                    <p>Adaptamos cada pedido según las necesidades del cliente.</p>
+                </div>
 
-            <div class="servicio">
-                <img src="imagenes/vacio.jpg" alt="Envasado al vacío" width="200">
-                <h3>Envasado al vacío</h3>
-                <p>Mantenemos la frescura y calidad del producto.</p>
+                <div class="servicio">
+                    <img src="imagenes/delivery.jpg" alt="Entrega a domicilio">
+                    <h3>Entrega a domicilio</h3>
+                    <p>Envío rápido y seguro directamente a tu hogar o negocio.</p>
+                </div>
+
+                <div class="servicio">
+                    <img src="imagenes/vacio.jpg" alt="Envasado al vacío">
+                    <h3>Envasado al vacío</h3>
+                    <p>Mantenemos la frescura y calidad del producto.</p>
+                </div>
+
             </div>
 
         </section>
@@ -108,6 +66,20 @@
     <footer>
         <p>Web creada en Serprofés SL. 2026-España</p>
     </footer>
+
+    <script>
+        const buscador = document.getElementById("buscador");
+        const servicios = document.querySelectorAll(".servicio");
+
+        buscador.addEventListener("keyup", function () {
+            const texto = buscador.value.toLowerCase();
+
+            servicios.forEach(servicio => {
+                const contenido = servicio.textContent.toLowerCase();
+                servicio.style.display = contenido.includes(texto) ? "block" : "none";
+            });
+        });
+    </script>
 
 </body>
 </html>
