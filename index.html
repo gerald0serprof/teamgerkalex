@@ -1,28 +1,223 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="es">
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Team GerkAlex</title>
-    <link rel='stylesheet' href='main.css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Mi Web Básica</title>
+  <meta name="description" content="Página principal de una web básica con enlaces a servicios y contactos.">
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --primary: #0f766e;
+      --primary-dark: #0b5d57;
+      --border: #dddddd;
+      --shadow: 0 10px 25px rgba(0,0,0,0.08);
+      --radius: 14px;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #e6f4f2;
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 80px 0 50px;
+    }
+
+    .hero-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 14px;
+    }
+
+    p.lead {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 26px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+    }
+
+    .features {
+      padding: 10px 0 70px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .card p { color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 24px 0;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-box {
+        padding: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Mi empresa</h1>
-        <nav class="links-container">
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="contactos.html">Contactos</a>     
-        </nav>
-    </header>
-    <main>
-        <section id="Bienvenido">
-            <h2>Bienvenido a nuestra Web</h2>
-        </section>
-    </main>
-    <foter>
-        <p> Web creada en Serprofés SL. 2026-España</p>
-    </foter>
-</body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Web buscador de Carne Gourmet</div>
+      <nav>
+        <a href="index.html" class="active">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contactos.html">Contactos</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <h1>Bienvenido a nuestra web</h1>
+          <p class="lead">Esta es una página principal sencilla del mundo carnívoco. 
+            Vete a la sección de servicios o a la página de contactos.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="servicios.html">Ver servicios</a>
+            <a class="btn btn-secondary" href="contactos.html">Ir a contactos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container grid">
+        <article class="card">
+          <h2>Contenido 1</h2>
+          <p>Parte del contenido 1</p>
+        </article>
+        <article class="card">
+          <h2>Contenido 2</h2>
+          <p>Parte del contenido 2</p>
+        </article>
+        <article class="card">
+          <h2>Contenido 3</h2>
+          <p>Parte del contenido 3</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">&copy; Web creada en Serprofés SL. 2026-España</div>
+  </footer>
+</body>
 </html>

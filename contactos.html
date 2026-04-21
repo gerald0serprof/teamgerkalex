@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos | Web buscador</title>
+  <meta name="description" content="Página de contacto básica.">
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --primary: #0f766e;
+      --border: #dddddd;
+      --shadow: 0 10px 25px rgba(0,0,0,0.08);
+      --radius: 14px;
+      --max: 1100px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(92%, var(--max)); margin: 0 auto; }
+    header, footer { background: var(--surface); }
+    header { border-bottom: 1px solid var(--border); }
+    footer { border-top: 1px solid var(--border); padding: 24px 0; text-align: center; color: var(--muted); }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; gap: 16px; }
+    .logo { font-size: 1.2rem; font-weight: bold; color: var(--primary); }
+    nav { display: flex; gap: 10px; flex-wrap: wrap; }
+    nav a { padding: 10px 14px; border-radius: 10px; color: var(--muted); font-weight: 600; }
+    nav a:hover, nav a.active { background: #e6f4f2; color: var(--primary); }
+    main { padding: 70px 0; }
+    .box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
+    h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 12px; }
+    .box > p { color: var(--muted); margin-bottom: 22px; }
+    .contact-list { display: grid; gap: 14px; }
+    .item { padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: #fcfcfc; }
+    .item strong { color: var(--primary); display: block; margin-bottom: 4px; }
+    @media (max-width: 700px) { .nav { flex-direction: column; align-items: flex-start; } .box { padding: 24px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Web buscador de Carne Gourmet</div>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contactos.html" class="active">Contactos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="box">
+        <h1>Contacta con nosotros</h1>
+        <p>Estamos a tu servicio de Lunes a Viernes de 10:00h a 20:00h</p>
+        <div class="contact-list">
+          <div class="item">
+            <strong>Correo electrónico</strong>
+            <span>team.gerkalex@miweb.com</span>
+          </div>
+          <div class="item">
+            <strong>Teléfono</strong>
+            <span>+34 600 000 000</span>
+          </div>
+          <div class="item">
+            <strong>Dirección</strong>
+            <span>Calle del emprendedor 123, Olimpia 515001</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">&copy; Web creada en Serprofés SL. 2026-España</div>
+  </footer>
+</body>
+</html>
