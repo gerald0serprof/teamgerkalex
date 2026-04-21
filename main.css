@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px;
+}
+
+.links-container a {
+    margin: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.links-container a:hover {
+    color: #c0392b;
+}
+
+h2 {
+    color: #c0392b;
+}
