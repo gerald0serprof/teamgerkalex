@@ -1,12 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    text-align: center;
+    background-color: #f4f4f4;
     margin: 0;
 }
 
 header {
-    background-color: #4a90e2;
+    background-color: #1a1a1a;
     color: white;
     padding: 15px;
 }
@@ -14,18 +13,13 @@ header {
 .links-container a {
     margin: 10px;
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
-.servicio {
-    margin: 20px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+.links-container a:hover {
+    color: #c0392b;
 }
 
-.servicio img {
-    border-radius: 10px;
-    margin-bottom: 10px;
+h2 {
+    color: #c0392b;
 }
